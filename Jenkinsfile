@@ -10,6 +10,7 @@ pipeline {
         text(name: 'more_info', defaultValue: '', description: '通知信息')
     }
     environment {
+        BRANCH = 'master'
         PAYMENT_APP_NAME = 'jeepay-payment-ui'
         MANAGER_APP_NAME = 'jeepay-manager-ui'
         MERCHANT_APP_NAME = 'jeepay-merchant-ui'

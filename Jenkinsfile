@@ -33,13 +33,6 @@ pipeline {
                 git branch: "${params.BRANCH}", credentialsId: "${GITHUB_CREDENTIAL_ID}", url: "${GITHUB_URL}"
             }
         }
-        stage('maven build jeepay') {
-            steps {
-                container('maven') {
-                    sh "mvn clean package -Dmaven.test.skip=true -Ptest"
-                }
-            }
-        }
 
         stage('docker buildx ') {
             steps {

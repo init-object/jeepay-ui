@@ -10,7 +10,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
 RUN apk update
 RUN apk add --no-cache --virtual .build-deps alpine-sdk python3
 
-RUN npm config set registry https://registry.npmmirror.com
+RUN npm config set registry https://registry.npm.taobao.org
 
 RUN cd /workspace/jeepay-ui-${PLATFORM} && npm install  && npm run build
 
